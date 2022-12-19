@@ -1,0 +1,91 @@
+{
+	"general": {
+		"theme": "Tema",
+		"attrTheme": "Tema",
+		"logoAlt": "Marchio REP98",
+		"lang": {
+			"es": "Español",
+			"en": "English",
+			"it": "Italiano"
+		},
+		"loadding": "Caricamento in corso..."
+	},
+	"nav":{
+		"aboutme": "Conoscimi",
+		"services": "Servizi",
+		"briefcase": "Valigetta",
+		"contact": "Contatto"
+	},
+	"header": {
+		"welcome": "Ciao benvenuto",
+		"iam": "Sono Robert Pérez",
+		"job":"Sviluppatore web full-stack"
+	},
+	"about": {
+		"photo": "Foto di Robert Pérez",
+		"job": "Sviluppatore web full-stack",
+		"description": {
+			"p1": "Web Developer dal 2010, formato per qualsiasi tipo di sviluppo web o applicazione web, specializzato in Frontend, ho sviluppato centinaia di siti web utilizzando CMS, Framework e codice puro, oltre a librerie di codici, tra gli altri.",
+			"p2": "Sono una di quelle persone che amano le sfide, capace di affrontare ogni giorno una nuova sfida e superarla, mi piace innovare, ecco perché la mia carriera professionale, che ho imparato attraverso la pratica, potendo lavorare con persone così meravigliose da tutto il mondo."
+		},
+		"downloadAlt": "Scarica Curriculum Vitae e lettera di presentazione",
+		"downloadBtn": "Scarica CV"
+	},
+	"service": {
+		"title": "Servizi",
+		"btn1":"Citazione",
+		"btn2":"Richiedi",
+		"service1":{
+			"title": "Web design",
+			"desp": "Siti web, siti aziendali, su misura, negozi online, siti di blog, notizie, forum e altro ancora per evidenziare il potenziale della tua azienda, attività o impresa e far crescere il tuo marchio."
+		},
+		"service2": {
+			"title": "Sviluppo del codice",
+			"desp":"Hai bisogno di funzioni esclusive per il tuo sito web o sviluppi un sito web esclusivo? Ti offro il miglior servizio di sviluppo del codice che meglio si adatta alle tue esigenze."
+		},
+		"service3": {
+			"title": "Riprogettazione e manutenzione",
+			"desp":"Modernizzo il tuo sito web, per ottenere risultati migliori e ho i migliori piani di manutenzione sul mercato per mantenere il volto della tua azienda o attività (il tuo sito web) ottimizzato, aggiornato, pulito, sicuro e moderno."
+		},
+		"service4": {
+			"title": "Traduzione web",
+			"desp":"Devi raggiungere più persone nel mondo, non preoccuparti! Traduco il tuo sito web in molte lingue, inglese, spagnolo, tedesco, francese, italiano, tedesco, mandarino e molto altro ancora..."
+		},
+		"service5": {
+			"title": "Consiglio",
+			"desp":"Vuoi migrare la tua attività nel cloud, ti offro aiuto e consigli per avviare la tua attività online e questo servizio è completamente <strong>GRATUITO</strong>. Non ti chiederò di essere al tuo fianco nei tuoi primi passi."
+		},
+		"service6": {
+			"title": "SEO tecnico",
+			"desp":"Miglioro il tuo sito web, per ottenere un miglior posizionamento nei principali motori di ricerca e aumentare così le visite al tuo sito web, vendere più prodotti o farti conoscere."
+		}
+	},
+	"portfolio": {
+		"title": "Conoscere il mio lavoro",
+		"subtitle": "Valigetta",
+		"filter": {
+			"all": "Tutto",
+			"page": "Pagine",
+			"loadmore": "Carica di più"
+		}
+	},
+	"repo": {
+		"homepage": "Sito ufficiale"
+	},
+	"msm": {
+		"p1": "Salve, sono interessato al servizio",
+		"p2": "e mi chiamo",		
+		"modalTitle": "Ops, scusami",
+		"modalCont": "Questa opzione non è abilitata"
+	},
+	"contact": {
+		"title": "Contatto",
+		"form": {
+			"name":"Come ti chiami?",
+			"email":"Qual è la tua email?",
+			"msm": "Qual è il tuo telefono?",
+			"phone": "Dimmi come posso aiutarti?",
+			"btn": "Invia messaggio"
+		}
+	}
+}

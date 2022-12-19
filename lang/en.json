@@ -1,0 +1,91 @@
+{
+	"general": {
+		"theme": "Theme",
+		"attrTheme": "Theme",
+		"logoAlt": "Logo REP98",
+		"lang": {
+			"es": "Español",
+			"en": "English",
+			"it": "Italiano"
+		},
+		"loadding": "loading..."
+	},
+	"nav":{
+		"aboutme": "Know me",
+		"services": "Services",
+		"briefcase": "Briefcase",
+		"contact": "Contact"
+	},
+	"header": {
+		"welcome": "Hello welcome",
+		"iam": "I'm Robert Pérez",
+		"job":"Full Stack Web Developer"
+	},
+	"about": {
+		"photo": "Photo by Robert Pérez",
+		"job": "Full Stack Web Developer",
+		"description": {
+			"p1": "Web Developer since 2010, trained for any type of web development or web application, specialized in Frontend, I have developed hundreds of websites using CMS, Framework and pure code, as well as code libraries, among others.",
+			"p2": "I am one of those people who love challenges, capable of facing a new challenge every day and overcoming them, I like to innovate, that is why my professional career, which I have learned through practice, being able to work with such wonderful people from all over the world."
+		},
+		"downloadAlt": "Download Curriculum Vitae and Cover Letter",
+		"downloadBtn": "Download CV"
+	},
+	"service": {
+		"title": "Services",
+		"btn1":"Quote",
+		"btn2":"Apply for",
+		"service1":{
+			"title": "Web design",
+			"desp": "Websites, Corporate Sites, Custom Made, Online Stores, Blog Sites, News, Forums and more to highlight the potential of your company, business or venture and grow your brand."
+		},
+		"service2": {
+			"title": "Code Development",
+			"desp":"Do you need exclusive functions for your website, or develop an exclusive website? I offer you the best code development service that best suits your needs."
+		},
+		"service3": {
+			"title": "Redesign and Maintenance",
+			"desp":"I modernize your website, to obtain better results and I have the best maintenance plans on the market to keep the face of your company or business (your website) optimized, updated, clean, secure and modern."
+		},
+		"service4": {
+			"title": "Web Translation",
+			"desp":"You need to reach more people in the world, don't worry! I translate your website in many languages, English, Spanish, German, French, Italian, German, Mandarin and much, many more..."
+		},
+		"service5": {
+			"title": "Advice",
+			"desp":"You want to migrate your business to the cloud, I offer you help and advice to start your online business and this service is completely <strong>FREE</strong>. I will not charge you to be by your side in your first steps."
+		},
+		"service6": {
+			"title": "Technical SEO",
+			"desp":"I improve your website, to achieve a better positioning in the main search engines and thus increase visits to your website, sell more products or make yourself known."
+		}
+	},
+	"portfolio": {
+		"title": "Know my Work",
+		"subtitle": "Briefcase",
+		"filter": {
+			"all": "All",
+			"page": "Pages",
+			"loadmore": "Load more"
+		}
+	},
+	"repo": {
+		"homepage": "Official website"
+	},
+	"msm": {
+		"p1": "Hello, I am interested in the",
+		"p2": "service and my name is ",		
+		"modalTitle": "Oops, excuse me",
+		"modalCont": "This option is not enabled"
+	},
+	"contact": {
+		"title": "Contact",
+		"form": {
+			"name":"What's your name?",
+			"email":"What is your email?",
+			"msm": "What is your phone number?",
+			"phone": "Tell me how can I help you?",
+			"btn": "Send Message"
+		}
+	}
+}

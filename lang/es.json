@@ -1,0 +1,91 @@
+{
+	"general": {
+		"theme": "Tema",
+		"attrTheme": "Tema",
+		"logoAlt": "Logo REP98",
+		"lang": {
+			"es": "Español",
+			"en": "English",
+			"it": "Italiano"
+		},
+		"loadding": "Cargando..."
+	},
+	"nav":{
+		"aboutme": "Conocemé",
+		"services": "Servicios",
+		"briefcase": "Portafolio",
+		"contact": "Contacto"
+	},
+	"header": {
+		"welcome": "Hola, Bienvenido",
+		"iam": "Soy Robert Pérez",
+		"job":"Desarrollador Web Full Stack"
+	},
+	"about": {
+		"photo": "Foto de Robert Pérez",
+		"job": "Desarrollador Web Full Stack",
+		"description": {
+			"p1": "Desarrollador Web desde el 2010, capacitado para cualquier tipo de desarrollo web o aplicativo web, especializado en Frontend, he desarrollado cientos de sitios web con uso de CMS, Framework y a código puro, además de librerías de código, entre otras.",
+			"p2": "Soy de aquellas personas que aman los retos, capaz de afrontar un nuevo reto cada día y superarlos, me gusta innovar, es por ello mi carrera profesional, la cual he aprendido con la práctica al poder trabajar con tan maravillosas  personas de todo el mundo."
+		},
+		"downloadAlt": "Descargar Curriculum Vitae y Carta de Presentación",
+		"downloadBtn": "Descargar CV"
+	},
+	"service": {
+		"title": "Servicios",
+		"btn1":"Cotizar",
+		"btn2":"Solicitar",
+		"service1":{
+			"title": "Diseño Web",
+			"desp": "Sitios Web, Sitios Corporativos, Hecho a medidas, Tiendas Online, Sitios de Blog, Noticias, Foros y más para destacar el potencial de su empresa, negocio o emprendimiento y hacer crecer su marca."
+		},
+		"service2": {
+			"title": "Desarrollo de Código",
+			"desp":"Necesitas funciones exclusivas para tu web, o desarrollar una web exclusiva? te ofrezco el mejor servicio de desarrollo de código que mejor se adapte a tus necesidades."
+		},
+		"service3": {
+			"title": "Rediseño y Mantenimiento",
+			"desp":"Modernizo tu web, para obtener mejores resultados y cuento con los mejores planes de mantenimiento del mercado para mantener optimizada, actualizada, limpia, segura y Moderna la cara de Tu empresa o negocio (tu sitio Web)."
+		},
+		"service4": {
+			"title": "Traducción Web",
+			"desp":"Necesitas llegar a más personas del mundo, ¡Tranquilo! Traduzco tu web en muchos idiomas, Inglés, Español, Alemán, Francés, Italiano, Alemán, Mandarín y mucho, muchos más..."
+		},
+		"service5": {
+			"title": "Asesoramiento",
+			"desp":"Quieres migrar tu negocio a la nube, te ofrezco ayuda y asesoramiento para iniciar tu negocio online y este servicio es totalmente <strong>GRATIS</strong>.  No te cobraré por estar a tu lado en tus primeros pasos."
+		},
+		"service6": {
+			"title": "SEO Técnico",
+			"desp":"Mejoro tu web, para lograr un mejor posicionamiento en los principales motores de búsqueda y así lograr aumentar las visitas de tu web, vender más productos o darte a conocer."
+		}
+	},
+	"portfolio": {
+		"title": "Conozca mi trabajo",
+		"subtitle": "Portafolio",
+		"filter": {
+			"all": "Todo",
+			"page": "Páginas",
+			"loadmore": "Cargar más"
+		}
+	},
+	"repo": {
+		"homepage": "Página Oficial"
+	},
+	"msm": {
+		"p1": "Hola me interesa el servicio de",
+		"p2": "y me llamo ",
+		"modalTitle": "Uup.., Disculpe",
+		"modalCont": "Esta opción no está habilitada"
+	},
+	"contact": {
+		"title": "Contacto",
+		"form": {
+			"name":"Como te llamas?",
+			"email":"Cual es tu Correo?",
+			"msm": "Cual es su Teléfono?",
+			"phone": "Dígame en que puedo ayudarl@?",
+			"btn": "Enviar Mensaje"
+		}
+	}
+}
