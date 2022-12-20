@@ -83029,7 +83029,7 @@ var Modal = tingle_js__WEBPACK_IMPORTED_MODULE_4__.modal;
 // LIST COLORS
 var Colors = ["#17160a", "#c3f30c", "#14b4ec", "#cafa04", "#7b9604", "#10698b", "#1399cb", "#1c84ac", "#5c7c04"];
 _$.Git = new octokit__WEBPACK_IMPORTED_MODULE_7__.Octokit({
-  auth: "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"
+  auth: atob(sessionStorage.getItem("repToken") + "==")
 });
 
 // MODAL
