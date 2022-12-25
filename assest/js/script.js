@@ -68324,7 +68324,8 @@ _$(function () {
       });
     });
   };
-  i18n(getLangNav());
+  var u = new URL(location.href);
+  i18n(u.searchParams.get('lang') || getLangNav());
   _$('.select-lang .dropdown-menu a').click(function (e) {
     e.preventDefault();
     nprogress__WEBPACK_IMPORTED_MODULE_0___default().start();
@@ -68336,6 +68337,11 @@ _$(function () {
     a.find('picture img').attr('src', _$(this).find('picture img').attr('src'));
     _$('.dropdown-menu .active').removeClass('active');
     _$(this).parent().addClass('active');
+    if (lang != "es-VE") {
+      _$("#btn_download_cv").attr("href", _$.url('/pdf/CV_English.pdf'));
+    } else {
+      _$("#btn_download_cv").attr("href", _$.url('/pdf/CV_Español.pdf'));
+    }
     i18n(lang).then(function () {
       _$("#card-port").emptyHtml();
       _$.listRepo();
