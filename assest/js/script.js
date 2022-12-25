@@ -68328,7 +68328,7 @@ _$(function () {
           lang: lang
         });
       });
-      if (_i18n != "es") {
+      if (lang != "es") {
         _$("#btn_download_cv").attr("href", _$.url('/pdf/CV_English.pdf'));
       } else {
         _$("#btn_download_cv").attr("href", _$.url('/pdf/CV_Español.pdf'));
