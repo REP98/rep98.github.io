@@ -4,9 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
 <url>
   <loc>https://rep98.github.io/</loc>
   <lastmod>2022-12-25T15:47:32+00:00</lastmod>
@@ -37,6 +34,238 @@
   <lastmod>2022-12-25T15:47:32+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
-
+<url>
+  <loc>https://rep98.github.io/Colors/</loc>
+  <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.90</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.90</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Core.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Plugins.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Utils.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Fascino.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Fascino_Fascino.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module.exports_module.exports.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Core.Data.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Core.Event.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Core.Selector.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Core.Selector.SelectorError.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Plugins.HTTP.Serialize.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Plugins.Progress.Progress.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/-_$.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/-_$.Hooks.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Plugins.HTTP.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Plugins.HTTP.fetch.OptionsFT.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Plugins.Progress.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/module-Utils.Colors.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/tutorial-Colors.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/tutorial-Data.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/tutorial-Events.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Classes_index.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Plugins_index.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Utils_index.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Utils_Utils.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Utils_Template.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/core.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Classes_Data.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Classes_Selector.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Plugins_progressbar_Progress.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Classes_Event.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Plugins_http_serialize.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Fascino.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Plugins_http_index.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Plugins_progressbar_index.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Plugins_http_fetch.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://rep98.github.io/fascino/Utils_Colors.js.html</loc>
+   <lastmod>2022-11-29T04:07:31+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
 </urlset>
