@@ -258,5 +258,31 @@
 		"page": "https://vzlaweb.blogspot.com/search/label/Tutoriales",
 		"created_at": "2022-05-20T22:26:51Z",
     	"updated_at": "2022-05-20T22:37:32Z"
+	},
+	"calCss": {
+		"size": 39185165,
+		"name": {
+			"en":"CSS Calculator",
+			"es": "Calculadora CSS",
+			"it":"Calcolatrice CSS"
+		},
+		"description": {
+			"en": "Easily calculate your CSS units",
+			"es": "Calcule con facilidad sus unidades CSS",
+			"it": "Calcola facilmente le tue unità CSS"
+		},
+		"url": "https://github.com/REP98/calCss",
+		"clone": "https://github.com/REP98/calCss.git",
+		"readme": "https://github.com/REP98/calCss#readme",
+		"image": "https://rep98.github.io/images/calcss.png",
+		"license": {
+			"link": "https://github.com/REP98/calCss/blob/main/LICENSE",
+			"name": "MIT"
+		},
+		"lang": ["Python"],
+		"tag": ["Aplicacion", "Linux"],
+		"page": "https://github.com/REP98/calCss/releases",
+		"created_at": "2023-01-08T17:26:30Z",
+    	"updated_at": "2023-01-10T20:35:44Z"
 	}
 }
