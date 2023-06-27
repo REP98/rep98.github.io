@@ -19,7 +19,7 @@
 			"link": "https://github.com/REP98/Html5Valid/blob/c71601d90053c2aea801693e25ea1b4e229c0c8a/LICENSE",
 			"name": "MIT"
 		},
-		"lang": ["scss", "js"],
+		"lang": ["Scss", "Javascript"],
 		"tag": ["jquery"],
 		"page": null,
 		"created_at": "2018-11-16T12:38:40Z",
@@ -71,7 +71,7 @@
 			"link": "https://github.com/REP98/Colors/blob/master/LICENSE",
 			"name": "MIT"
 		},
-		"lang": ["Scss", "CSS"],
+		"lang": ["SCSS", "CSS"],
 		"tag": [],
 		"page": "https://rep98.github.io/Colors",
 		"created_at": "2021-04-07T20:06:49Z",
@@ -149,7 +149,7 @@
 			"link": "https://github.com/REP98/fascino/blob/master/LICENSE",
 			"name": "MIT"
 		},
-		"lang": ["js"],
+		"lang": ["Javascript"],
 		"tag": [],
 		"page": "https://rep98.github.io/fascino",
 		"created_at": "2021-12-27T22:33:18Z",
@@ -175,7 +175,7 @@
 			"link": "https://github.com/REP98/slider-fullwidth-wp/blob/master/LICENSE",
 			"name": "MIT"
 		},
-		"lang": ["PHP", "css", "js"],
+		"lang": ["PHP", "CSS", "Javascript"],
 		"tag": ["WordPress"],
 		"page": null,
 		"created_at": "2021-02-09T07:09:28Z",
@@ -227,7 +227,7 @@
 			"link": "https://github.com/REP98/sna/blob/master/LICENSE",
 			"name": "MIT"
 		},
-		"lang": ["HTML", "css"],
+		"lang": ["HTML", "CSS"],
 		"tag": [],
 		"page": null,
 		"created_at": "2020-03-04T14:02:51Z",
@@ -310,5 +310,31 @@
 		"page": null,
 		"created_at": "2023-02-26T05:07:54Z",
     	"updated_at": "2023-04-17T03:56:53Z"
+	},
+	"helperscss": {
+		"size": 5712,
+		"name": {
+			"es": "Ayudante CSS",
+			"en": "Helper CSS",
+			"it": "Assistente CSS"
+		},
+		"description": {
+			"es": "Ayudante CSS, una calculadora y selector de colores multiplataforma",
+			"en": "CSS Helper, a cross-platform color picker and calculator",
+			"it": "CSS Helper, un selettore di colori e una calcolatrice multipiattaforma"
+		},
+		"url": "https://github.com/REP98/helperscssmos",
+		"clone": "https://github.com/REP98/helperscssmos.git",
+		"readme": "https://github.com/REP98/helperscssmos#readme",
+		"image": "https://rep98.github.io/images/helperscss.png",
+		"license": {
+			"link": "https://github.com/REP98/helperscssmos/blob/main/LICENSE",
+			"name": "MIT"
+		},
+		"lang": ["TypeScript", "SCSS","HTML"],
+		"tag": ["Aplicacion", "Linux", "Android", "Window", "Electron"],
+		"page": "https://rep98.github.io/helperscssmos",
+		"created_at": "2023-06-10T23:08:08Z",
+    	"updated_at": "2023-06-26T22:25:34Z"
 	}
 }
