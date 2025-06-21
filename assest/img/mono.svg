@@ -1,0 +1,120 @@
+<svg
+   width="1102.4303"
+   height="1257.7926"
+   viewBox="0 0 291.68443 332.79111"
+   version="1.1"
+   id="svg98"
+   sodipodi:docname="MonoFullColor.min.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview100"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <defs
+     id="defs6">
+    <path
+       id="prefix__b"
+       fill="#ffc107"
+       stroke-width="0.49"
+       d="m -260.89,-197.622 -0.028,-10.331 8.929,2.17 h -5.245 v 2.836 l 2.979,0.39 0.022,1.87 -3.001,-0.612 0.15,2.82 4.146,1.586 0.045,2.579 z"
+       aria-label="E"
+       font-size="17.72px"
+       font-weight="700"
+       style="-inkscape-font-specification:'Inconsolata Bold';text-align:center" />
+    <path
+       id="prefix__c"
+       fill="#3949ab"
+       stroke-width="0.967"
+       d="m 271.172,121.929 a 8.543,8.543 0 0 1 -3.358,-0.665 c -1.026,-0.443 -1.935,-1.119 -2.728,-2.028 -0.793,-0.91 -1.422,-2.064 -1.889,-3.463 -0.443,-1.399 -0.664,-3.066 -0.664,-5.001 0,-1.702 0.163,-3.183 0.49,-4.442 0.35,-1.283 0.816,-2.355 1.399,-3.218 0.582,-0.886 1.247,-1.585 1.993,-2.098 a 7.564,7.564 0 0 1 2.343,-1.155 8.127,8.127 0 0 1 2.449,-0.384 c 1.632,0 3.02,0.384 4.162,1.154 1.166,0.746 0,0 0,0 0.043,0.027 -0.595,3.357 -0.595,3.357 -0.864,-0.43 -0.756,-0.404 -1.644,-0.773 a 5.72,5.72 0 0 0 -1.988,-0.401 c -0.747,0 -1.234,0 -1.929,0.02 -0.653,0.35 -1.224,0.875 -1.714,1.574 -0.49,0.7 -0.874,1.574 -1.154,2.623 -0.28,1.026 -0.42,2.215 -0.42,3.568 0,1.306 0.129,2.483 0.385,3.532 0.28,1.026 0.653,1.912 1.12,2.658 0.489,0.723 1.049,1.283 1.678,1.68 a 4.174,4.174 0 0 0 2.099,0.559 c 0.583,0 2.376,-0.002 2.866,-0.165 0.49,-0.164 8.659,-0.767 9.078,-1.14 0.42,-0.396 -0.326,0.536 0,0 -0.77,1.283 -6.45,2.922 -7.523,3.505 -1.128,0.262 -2.987,0.703 -4.456,0.703 z"
+       aria-label="C"
+       font-size="34.975px"
+       font-weight="600"
+       style="-inkscape-font-specification:'Inconsolata Semi-Bold';text-align:center" />
+  </defs>
+  <defs
+     id="defs52">
+    <filter
+       id="prefix__h"
+       width="1.0277823"
+       height="1.035352"
+       x="-0.017976765"
+       y="-0.0086576305"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         flood-color="#FFF"
+         flood-opacity=".118"
+         result="flood"
+         id="feFlood41" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite43" />
+      <feGaussianBlur
+         in="composite1"
+         result="blur"
+         stdDeviation=".1"
+         id="feGaussianBlur45" />
+      <feOffset
+         dx="-.2"
+         dy=".5"
+         result="offset"
+         id="feOffset47" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         result="composite2"
+         id="feComposite49" />
+    </filter>
+  </defs>
+  <g
+     filter="url(#prefix__h)"
+     font-family="Inconsolata"
+     text-anchor="middle"
+     transform="matrix(11.59502,0,0,11.59502,3879.4707,1201.3779)"
+     id="g96">
+    <text
+       x="-327.181"
+       y="-78.195999"
+       fill="#43a047"
+       stroke-width="0.8"
+       font-size="28.928px"
+       font-weight="700"
+       style="-inkscape-font-specification:'Inconsolata Bold';text-align:center"
+       id="text90"><tspan
+         x="-327.181"
+         y="-78.195999"
+         font-weight="600"
+         style="-inkscape-font-specification:'Inconsolata Semi-Bold'"
+         id="tspan88">{</tspan></text>
+    <use
+       xlink:href="#prefix__b"
+       stroke-width="0.49"
+       aria-label="E"
+       font-size="17.72px"
+       font-weight="700"
+       style="-inkscape-font-specification:'Inconsolata Bold';text-align:center"
+       transform="rotate(-23.697)"
+       id="use92" />
+    <use
+       xlink:href="#prefix__c"
+       stroke-width="0.967"
+       aria-label="C"
+       font-size="34.975px"
+       font-weight="600"
+       style="-inkscape-font-specification:'Inconsolata Semi-Bold';text-align:center"
+       transform="scale(-1.17953,-0.8478)"
+       id="use94" />
+  </g>
+</svg>

@@ -6,7 +6,15 @@ function showDialog(dialogId) {
 	}
 }
 function closeDialog(dialog) {
-	dialog.close();
+	dialog.classList.add("closing");
+	dialog.addEventListener(
+		"transitionend",
+		() => {
+			dialog.classList.remove("closing");
+			dialog.close();
+		},
+		{ once: true }
+	);
 	document.body.style.overflow = ''; // Restaura el scroll del fondo
 }
 
@@ -84,7 +92,15 @@ function init() {
 		});
 	});
 
-	panzoom(MermaidSvg);
+	panzoom(MermaidSvg, {
+		autocenter: true,
+		bounds: true,
+		initialX: 100,
+		initialY: 120,
+		initialZoom: 0.5
+	});
+
+	setTimeout(() => document.querySelector("#custom-loader").classList.remove("show"), 500)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -108,6 +124,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			init()
 		}
 	});
+	
+	const AsingLogo = document.querySelectorAll(".dialog-logo")
+	const logoTemplate = document.getElementById('logo-template');
+	AsingLogo.forEach(target => {
+		const clone = logoTemplate.content.cloneNode(true);
+		target.appendChild(clone);
+	});
+
 	document.querySelectorAll('.dialog-close-btn').forEach(button => {
         button.addEventListener('click', (e) => {
             const dialog = e.target.closest('.custom-dialog');

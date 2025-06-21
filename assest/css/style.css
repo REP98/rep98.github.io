@@ -15,6 +15,15 @@
 
     --logo-fill-light-mode: var(--color-primary-dark);
     --logo-fill-dark-mode: var(--color-primary-light);
+    /* Nuevas variables para la terminal, basadas en tu paleta */
+    --terminal-bg-color: var(--color-primary-dark); /* Fondo negro intenso */
+    --terminal-text-color: var(--color-rep-green); /* Texto principal verde REP98 */
+    --terminal-prompt-color: var(--color-section-secondary); /* Gris para el prompt */
+    --terminal-border-color: var(--color-rep-green); /* Borde de la terminal */
+    --terminal-shadow-color: rgba(67, 160, 71, 0.7); /* Sombra de resplandor verde */
+    --terminal-header-bg: #2b2b2b; /* Un gris oscuro para la barra del terminal */
+    --terminal-header-border: #444444; /* Un gris un poco más claro para el borde de la barra del terminal */
+
 }
 /* Normalize.css */
 
@@ -115,43 +124,45 @@
 }
 
 :where(button, input:is([type="button" i], [type="color" i], [type="reset" i], [type="submit" i]))::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+    border-style: none;
+    padding: 0;
 }
 
 :where(button, input:is([type="button" i], [type="color" i], [type="reset" i], [type="submit" i]))::-moz-focusring {
-  outline: 1px dotted ButtonText;
+    outline: 1px dotted ButtonText;
 }
 
 :where(:-moz-ui-invalid) {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 :where(dialog) {
-  background-color: white;
-  border: solid;
-  color: black;
-  height: -moz-fit-content;
-  height: fit-content;
-  left: 0;
-  margin: auto;
-  padding: 1em;
-  position: absolute;
-  right: 0;
-  width: -moz-fit-content;
-  width: fit-content;
+    background-color: white;
+    border: solid;
+    color: black;
+    height: -moz-fit-content;
+    height: fit-content;
+    left: 0;
+    margin: auto;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    width: -moz-fit-content;
+    width: fit-content;
 }
 
 :where(dialog:not([open])) {
-  display: none !important;
+    display: none !important;
 }
 
 
 :where(summary) {
-  display: list-item;
+    display: list-item;
 }
 
-
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 /* Configuración inicial para el modo claro por defecto */
 body {
@@ -162,6 +173,8 @@ body {
     overflow: hidden; /* Ocultar scroll por defecto para el efecto del diagrama */
     height: 100dvh;
     width: 100dvw;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* Tipografías específicas */
@@ -171,9 +184,146 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .raleway-header {
-    font-family: 'Raleway', sans-serif; /* Para títulos y encabezados */
+    font-family: 'Raleway', sans-serif; 
+    margin-top: 0;
+    margin-bottom: .5rem;
     font-weight: 700;
+    line-height: 1.2;
 }
+
+h1 {
+    z-index: 3090;
+    color: var(--color-primary-light);
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0.35rem 1rem;
+    background: rgba(255 255 255 / 20%);
+    box-shadow: 0px 4px 2px 0px #f4511e78;
+    border-radius: 25px;
+    font-size: clamp(1.2rem, 1.5rem, 3dvw);
+}
+h4 {
+    margin: 0.2rem 0;
+}
+
+svg.bi {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: -.125em;
+    fill: currentcolor;
+}
+.custom-loader-parent {
+    background-color: var(--color-primary-dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    overflow: hidden;
+    transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+    z-index: 0;
+    flex-direction: column;
+}
+
+.custom-loader {
+    width:120px;
+    height:120px;
+    margin: auto;
+    margin-bottom: 4rem;
+    color: #3949AB;
+    --c:linear-gradient(currentColor 0 0);
+    background:
+        var(--c) 0 76px,
+        var(--c) right 36px bottom 36px,
+        var(--c) right 36px top    36px,
+        var(--c) 36px 36px,
+        var(--c) 36px 100%,
+        var(--c) 100% 100%,
+        var(--c) 100% 0,
+        var(--c) 0 0;
+    background-repeat: no-repeat;
+}
+
+.custom-loader-parent span {
+    color: var(--color-section-contact);
+    margin: auto;
+    margin-top: 0.1rem;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: calc(1.625rem + 4.5vw);
+    font-family: 'Raleway', sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+.custom-loader-parent svg {
+	font-family: "Raleway", sans-serif;
+	width: 100%; height: 100%;
+}
+#custom-loader.show svg text {
+	animation: stroke 6s infinite alternate;
+	stroke-width: 2;
+	stroke: #E53935;
+	font-size: 100px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(255,193,7,0); stroke: rgba(229,57,53,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(255,193,7,0); stroke: rgba(229,57,53,1); }
+	80%  {fill: rgba(255,193,7,0); stroke: rgba(229,57,53,1); stroke-width: 3; }
+	100% {
+		fill: rgba(255,193,7,1); stroke: rgba(229,57,53,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+@keyframes l8-1 {
+    0%     {background-size: 0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   }
+    6.25%  {background-size: 80px 8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   }
+    12.5%  {background-size: 80px 8px,8px 40px,0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   }
+    18.75% {background-size: 80px 8px,8px 40px,40px 8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   }
+    25%    {background-size: 80px 8px,8px 40px,40px 8px,8px 80px,0    8px,8px 0   ,0    8px,8px 0   }
+    31.25% {background-size: 80px 8px,8px 40px,40px 8px,8px 80px,80px 8px,8px 0   ,0    8px,8px 0   }
+    37.5%  {background-size: 80px 8px,8px 40px,40px 8px,8px 80px,80px 8px,8px 100%,0    8px,8px 0   }
+    43.75% {background-size: 80px 8px,8px 40px,40px 8px,8px 80px,80px 8px,8px 100%,100% 8px,8px 0   }
+    48%,
+    52%    {background-size: 80px 8px,8px 40px,40px 8px,8px 80px,80px 8px,8px 100%,100% 8px,8px 80px}
+    56.25% {background-size: 0    8px,8px 40px,40px 8px,8px 80px,80px 8px,8px 100%,100% 8px,8px 80px}
+    62.5%  {background-size: 0    8px,8px 0   ,40px 8px,8px 80px,80px 8px,8px 100%,100% 8px,8px 80px}
+    68.75% {background-size: 0    8px,8px 0   ,0    8px,8px 80px,80px 8px,8px 100%,100% 8px,8px 80px}
+    75%    {background-size: 0    8px,8px 0   ,0    8px,8px 0   ,80px 8px,8px 100%,100% 8px,8px 80px}
+    81.25% {background-size: 0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 100%,100% 8px,8px 80px}
+    87.5%  {background-size: 0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   ,100% 8px,8px 80px}
+    93.75% {background-size: 0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 80px}
+    100%   {background-size: 0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   }
+}
+
+@keyframes l8-2 {
+    0%,49.9% {background-position:0 76px, right 36px bottom 36px, right 36px top 36px,36px 36px,36px 100%,100% 100%,100% 0,0 0}
+    50%,100% {background-position:right 36px bottom 36px, right 36px top 36px, 36px 36px,36px 100%,100% 100%,100% 0,0 0,bottom 36px left 0}
+}
+#custom-loader.show{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 3000;
+}
+#custom-loader.show .custom-loader {
+    animation: 
+        l8-1 4s infinite,
+        l8-2 4s infinite;
+}
+
 
 /* Main Header (SVG Diagrama) */
 .main-header {
@@ -186,6 +336,7 @@ h1, h2, h3, h4, h5, h6, .raleway-header {
     display: flex; /* Para centrar el diagrama de Mermaid */
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: var(--color-primary-dark);
     opacity: 0.8;
     background-image: radial-gradient(#e7e8ec 1px, var(--color-primary-dark) 1px);
@@ -229,18 +380,6 @@ h1, h2, h3, h4, h5, h6, .raleway-header {
     transition: fill 0.3s ease;
 }
 
-
-.mermaid .edge path {
-    stroke: var(--color-rep-green); /* Color verde para las líneas */
-    stroke-width: 2px;
-    transition: stroke 0.3s ease, stroke-width 0.3s ease;
-    filter: drop-shadow(0 0 2px rgba(67, 160, 71, 0.5)); /* Sombra suave para las líneas */
-}
-.mermaid .edge .arrowheadPath {
-    fill: var(--color-rep-green); /* Color para la punta de la flecha */
-    transition: fill 0.3s ease;
-}
-
 .mermaid .node:hover rect,
 .mermaid .node:hover circle,
 .mermaid .node:hover ellipse,
@@ -272,6 +411,12 @@ h1, h2, h3, h4, h5, h6, .raleway-header {
 {
     fill: var(--color-primary-dark) !important;
 }
+.mermaid .node[data-id="A"]:hover .nodeLabel,
+.mermaid .node[data-id="B"]:hover .nodeLabel
+{
+    fill: var(--color-primary-light) !important;
+    color: var(--color-primary-light) !important;
+}
 
 .mermaid .node[data-id="C"]:hover polygon,
 .mermaid .node[data-id="C1"]:hover rect,
@@ -282,7 +427,8 @@ h1, h2, h3, h4, h5, h6, .raleway-header {
 
 .mermaid .node[data-id="C"]:hover .nodeLabel,
 .mermaid .node[data-id="C1"]:hover .nodeLabel,
-.mermaid .node[data-id="C2"]:hover .nodeLabel
+.mermaid .node[data-id="C2"]:hover .nodeLabel,
+.mermaid .node[data-id="G"]:hover .nodeLabel
 {
     fill: var(--color-primary-light) !important;
     color: var(--color-primary-light) !important;
@@ -319,25 +465,42 @@ h1, h2, h3, h4, h5, h6, .raleway-header {
     color: var(--color-primary-dark) !important;
 }
 
+
 .custom-dialog {
-    border: none; /* Elimina el borde por defecto */
+    opacity: 0;
+    transform: scale(0.5);
+    border: none;
     padding: 0;
-    background-color: var(--color-primary-light); /* Fondo claro para el contenido */
+    background-color: var(--color-primary-light);
+    transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+    pointer-events: none;
     color: var(--color-primary-dark);
-    width: 80vw; /* Ancho ajustable */
-    max-width: 800px; /* Ancho máximo */
-    height: 80vh; /* Alto ajustable */
-    max-height: 600px; /* Alto máximo */
+    width: 100%;
+    max-width: 50rem;
+    height: 100%;
+    max-height: 37.5rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    border-radius: 8px; /* Bordes redondeados */
-    overflow: hidden; /* Oculta el contenido que se desborda para el scroll interno */
-    display: flex; /* Usar flexbox para el diseño interno */
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
     flex-direction: column;
 }
 
 .custom-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente detrás del diálogo */
-    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(3px);
+}
+
+.custom-dialog[open] {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.custom-dialog.closing {
+    opacity: 0;
+    transform: scale(0.5);
+    pointer-events: none;
 }
 
 .dialog-header {
@@ -376,15 +539,25 @@ h1, h2, h3, h4, h5, h6, .raleway-header {
 .dialog-close-btn {
     background: none;
     border: none;
-    color: inherit; 
+    color: inherit;
     font-size: 1.2em;
     cursor: pointer;
     padding: 5px;
+    width: 32px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    transition: 0.2s background ease-in-out;
+    border-radius: 100%;
 }
-
+button.dialog-close-btn:hover {
+    background: var(--color-rep-red);    
+}
 .dialog-content {
     flex-grow: 1; 
-    padding: 15px;
+    padding: 0.65rem;
     overflow-y: auto; /* Permite scroll si el contenido es largo */
     color: var(--color-primary-dark); /* Texto oscuro en fondo claro */
 }
@@ -397,6 +570,358 @@ h1, h2, h3, h4, h5, h6, .raleway-header {
     max-height: 400px;
     /* Puedes ajustar z-index si necesitas que aparezcan sobre otros diálogos */
     z-index: 1000; 
+}
+
+dialog details > summary {
+    padding: 0.65rem 0;
+}
+
+dialog details > summary h3 {
+    margin: 0;
+    display: inline-block;
+}
+dialog details:not([open]) > summary {
+    border-bottom: 1px solid #ddd;
+}
+dialog details[open] {
+    border-bottom: 1px solid #ddd;
+}
+
+
+.services-grid-container {
+    display: grid;
+    /* Grid de 2 columnas en pantallas grandes, 1 en pequeñas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Min 280px para tarjetas, flexible */
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px; /* Padding dentro del diálogo */
+}
+
+/* Estilos para cada tarjeta de servicio */
+.service-card {
+    background-color: var(--color-primary-light); /* Fondo claro para las tarjetas */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(67,160,71,1), rgba(20,102,24,1));
+    transition: left 0.5s ease;
+    z-index: 0;
+    opacity: 0.2;
+}
+.service-card:hover::before {
+    left: 0;
+}
+
+.service-card * {
+    position: relative;
+    z-index: 1;
+}
+.service-card .service-icon {
+    font-size: 3em; /* Tamaño grande para los iconos */
+    color: var(--color-green); /* Color del icono, puedes variar por servicio o mantener uno */
+    margin-bottom: 10px;
+}
+
+.service-card h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--color-primary-dark);
+    font-size: 1.3em;
+}
+
+.service-card p {
+    font-size: 0.95em;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+/* Media Queries para pantallas más pequeñas si es necesario */
+@media (max-width: 768px) {
+    .services-grid-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        padding: 15px;
+    }
+}
+/* Estilos específicos para el diálogo de créditos (la ventana principal) */
+.terminal-dialog {
+    width: 90%;
+    background-color: var(--terminal-bg-color); /* Fondo terminal: Negro principal */
+    color: var(--terminal-text-color); /* Color de texto predeterminado: Verde REP98 */
+    font-family: 'Inconsolata', monospace; /* Fuente de la terminal */
+    border: 2px solid var(--terminal-border-color); /* Borde: Verde REP98 */
+    box-shadow: 0 0 15px var(--terminal-shadow-color); /* Resplandor: Verde REP98 */
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Encabezado del diálogo */
+.terminal-dialog .dialog-header {
+    background-color: var(--color-primary-dark);
+    color: var(--color-primary-light); /* Texto blanco */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--terminal-border-color); /* Borde que se mezcla con el terminal */
+    font-family: Arial, sans-serif; /* Para que el título del diálogo no sea Inconsolata */
+}
+
+.terminal-dialog .dialog-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    text-shadow: 0 0 5px var(--terminal-shadow-color); /* Resplandor del título: Verde REP98 */
+}
+
+.terminal-dialog .dialog-close-btn {
+    background: none;
+    border: none;
+    color: var(--color-primary-light); /* Color del botón de cerrar: Blanco */
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-shadow: 0 0 5px var(--terminal-shadow-color); /* Resplandor del botón: Verde REP98 */
+}
+
+
+/* Contenido principal del diálogo, donde va el terminal */
+.terminal-dialog .dialog-content {
+    padding: 0;
+    background-color: var(--terminal-bg-color);
+    color: var(--terminal-text-color);
+}
+
+/* Estilos de la barra superior de la "ventana" de terminal (puntos de control) */
+.terminal-header {
+    background-color: var(--terminal-header-bg); /* Un gris oscuro para la barra del terminal */
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--terminal-header-border); /* Borde ligeramente más claro */
+    gap: 8px;
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Puntos de colores que imitan los controles de ventana */
+.terminal-dot.red { background-color: var(--color-rep-red); }
+.terminal-dot.yellow { background-color: var(--color-rep-yellow); }
+.terminal-dot.green { background-color: var(--color-rep-green); }
+
+.terminal-title {
+    color: var(--color-section-secondary); /* Gris para el título de la terminal */
+    font-size: 0.9em;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Cuerpo principal del terminal (donde va el texto y la foto) */
+.terminal-body {
+    padding: 20px;
+    line-height: 1.6;
+    max-height: calc(100vh - 200px); /* Asegura que no se desborde */
+}
+
+.terminal-line {
+    margin-bottom: 5px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.terminal-line span {
+    color: var(--terminal-prompt-color); /* Color para el prompt '$>': Gris de la paleta */
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.terminal-line.status {
+    font-weight: bold;
+}
+
+.terminal-line.status.success {
+    color: var(--color-rep-green); /* Mensaje de éxito: Verde REP98 */
+}
+
+.terminal-line.status.info {
+    color: var(--color-rep-blue); /* Mensaje de información: Azul REP98 */
+}
+
+/* Estilos para la información del autor (tu foto y detalles) */
+.author-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    padding: 15px;
+    /* Borde punteado usando el color verde de la paleta */
+    border: 1px dashed var(--color-rep-green);
+    border-radius: 5px;
+    /* Fondo muy sutil con el verde de la paleta, muy transparente */
+    background-color: rgba(67, 160, 71, 0.05);
+}
+
+.author-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* Borde verde alrededor de la foto */
+    border: 3px solid var(--color-rep-green);
+    /* Resplandor verde */
+    box-shadow: 0 0 10px var(--terminal-shadow-color);
+    flex-shrink: 0;
+}
+
+.author-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Opcional: Filtro para ajustar la imagen al estilo terminal */
+    /* filter: grayscale(50%) brightness(1.2); */ /* Ejemplo: un poco desaturado y más brillante */
+    /* filter: sepia(30%) hue-rotate(90deg) saturate(1.5) brightness(0.8); */ /* Ejemplo con tinte verdoso */
+    /* filter: grayscale(100%); */ /* Blanco y negro */
+}
+
+.author-details {
+    text-align: left;
+    width: 100%;
+}
+
+.author-details p {
+    margin-bottom: 3px;
+    font-size: 1.05em;
+    color: var(--terminal-text-color); /* Asegura que el texto de detalles sea verde */
+}
+
+.author-details p span {
+    color: var(--terminal-prompt-color); /* Para el '#' */
+}
+
+/* Media Query para pantallas más grandes: fila para la información del autor */
+@media (min-width: 768px) {
+    .author-info {
+        flex-direction: row;
+        text-align: left;
+    }
+    .author-details {
+        text-align: left;
+        flex-grow: 1;
+    }
+}
+
+#contact-dialog .dialog-content {
+    background-color: var(--color-primary-dark);
+}
+
+#contact-dialog .text-social{
+    background: #E53935;
+    background: linear-gradient(to right, #E53935 10%, #FFC107 92%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: calc(1.525rem + 3.3vw);
+    text-align: center;
+    width: 100%;
+}
+#contact-dialog .social-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.glow-on-hover {
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    display: block;
+    padding: 0.35rem;
+    flex: 1 0 auto;
+    max-width: 64px;
+    aspect-ratio: 1;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
 
 /* Footer */
