@@ -1,0 +1,379 @@
+/**
+ * Minified by jsDelivr using clean-css v5.3.2.
+ * Original file: /npm/modern-normalize@3.0.1/modern-normalize.css
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+*,::after,::before{box-sizing:border-box}html{font-family:system-ui,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';line-height:1.15;-webkit-text-size-adjust:100%;tab-size:4}body{margin:0}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-color:currentcolor}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}legend{padding:0}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}
+/*# sourceMappingURL=/sm/d2d8cd206fb9f42f071e97460f3ad9c875edb5e7a4b10f900a83cdf8401c53a9.map */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+:root {
+    --color-primary-dark: #1a1a1a;   /* Negro de fondo en Light Mode, texto en Dark Mode */
+    --color-primary-light: #FAFAFA;  /* Blanco de fondo en Dark Mode, texto en Light Mode */
+
+    --color-rep-blue: #3949AB;     /* Azul (R) - Sobre Mí / Contacto (si revisado) */
+    --color-rep-yellow: #FFC107;   /* Amarillo (E) - Contacto */
+    --color-rep-green: #43A047;    /* Verde (P) - Servicios */
+    --color-rep-red: #e53935;      /* Rojo (98) - Portafolio */
+
+    --color-section-secondary: #9E9E9E; /* Gris azulado para nodos secundarios */
+    --color-text-light: #F5F5F5;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: var(--color-primary-dark);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+p{
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-rep-blue);
+    transition: 0.2s text-decoration ease-in-out;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:visited {
+    color: var(--color-rep-blue);
+}
+
+header#navbar {
+    width: 100%;
+    height: 4rem; /* Un poco más alto para mayor presencia */
+    padding: 0.5rem clamp(1rem, 4vw, 3rem); /* Padding horizontal adaptable, vertical fijo */
+    position: sticky; /* Sticky para que se quede arriba al hacer scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    /* bottom: auto; ya no es necesario si es sticky */
+    
+    /* Nueva apariencia para el fondo */
+    background-color: var(--color-primary-dark); /* Un fondo oscuro y sólido */
+    /* background: rgba(0, 0, 0, 0.9); /* Opción con transparencia sutil y opaca */
+    
+    /* Borde o Sombra más definidos */
+    border-bottom: 1px solid var(--color-section-secondary); /* Borde sutil inferior */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra más definida */
+    /* backdrop-filter: blur(5px); /* Efecto de desenfoque si usas background-color con transparencia */
+    
+    z-index: 1090;
+    display: flex; /* Asegura que el contenedor interno se alinee bien */
+    align-items: center;
+    justify-content: center; /* Centra el container internamente */
+}
+
+header#navbar .container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+header#navbar .logo img {
+    height: 2rem; /* Tamaño del logo un poco más grande */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+header#navbar .logo:hover img {
+    transform: scale(1.1); /* Pequeño efecto al pasar el mouse */
+}
+header#navbar  svg {
+	font-family: "Raleway", sans-serif;
+	width: 100%; 
+    height: 100%;
+}
+header#navbar svg text {
+	animation: stroke 6s infinite alternate;
+	stroke-width: 2;
+	stroke: #E53935;
+	font-size: 60px;
+}
+
+@keyframes stroke {
+	0%   {
+		fill: rgba(255,193,7,0); stroke: rgba(229,57,53,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(255,193,7,0); stroke: rgba(229,57,53,1); }
+	80%  {fill: rgba(255,193,7,0); stroke: rgba(229,57,53,1); stroke-width: 3; }
+	100% {
+		fill: rgba(255,193,7,1); stroke: rgba(229,57,53,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+header#navbar .wrapper-animate {
+    margin: auto;
+    height: 64px;
+}
+
+header#navbar .btn-group {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 0.5rem; 
+    margin: 0; 
+}
+
+header#navbar .btn-group a {
+    display: flex; /* Usamos flex para centrar el SVG */
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.8rem; /* Padding uniforme */
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    
+    /* Estilo de botón más moderno */
+    background-color: transparent; /* Fondo transparente por defecto */
+    border: 1px solid var(--color-section-secondary); /* Borde sutil */
+    border-radius: 0.35rem; /* Bordes redondeados individuales */
+    color: var(--color-text-light); /* Color del texto/SVG por defecto */
+    transition: 
+        background-color 0.2s ease-in-out, 
+        border-color 0.2s ease-in-out, 
+        box-shadow 0.2s ease-in-out,
+        color 0.2s ease-in-out; /* Transiciones para todos los efectos */
+}
+header#navbar .btn-group a:first-child {
+    border-radius: 0.35rem; /* Asegura que ambos tengan el mismo radio */
+    margin-right: 0; /* Elimina cualquier margen específico */
+}
+header#navbar .btn-group a:last-child {
+    border-radius: 0.35rem; /* Asegura que ambos tengan el mismo radio */
+}
+
+header#navbar .btn-group a:hover {
+    background-color: var(--color-rep-blue); /* Color de fondo al pasar el mouse */
+    border-color: var(--color-rep-blue); /* Borde del mismo color */
+    box-shadow: 0 0 15px var(--color-rep-blue-transparent); /* Efecto de "neón" o brillo */
+    color: var(--color-primary-light); /* Asegura que el texto y SVG se pongan claros */
+}
+
+header#navbar .btn-group a svg {
+    fill: currentColor; /* Usa el color del texto para el SVG */
+    width: 1.2rem; /* Tamaño del icono */
+    height: 1.2rem;
+    transition: fill 0.2s ease-in-out; /* Transición para el color del SVG */
+}
+@media (max-width: 480px) {
+    header#navbar {
+        height: 3.5rem; /* Un poco más compacto en móviles */
+        padding: 0.35rem clamp(0.5rem, 2vw, 1rem);
+    }
+    header#navbar .btn-group a {
+        padding: 0.4rem 0.6rem;
+    }
+    header#navbar .logo img {
+        height: 1.8rem;
+    }
+}
+main.page {
+    background-color: #FFF;
+    color: var(--color-primary-dark);
+    margin: auto;
+    margin-top: 0.35rem;
+    margin-bottom: 2rem;
+    padding: clamp(1.5rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
+    z-index: 1;
+    display: block;
+    position: relative;
+    min-height: 80vh;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 0 15px #ddd;
+    border-radius: 8px;
+}
+@media (max-width: 768px) {
+    .page {
+        padding: clamp(1rem, 4vw, 2rem) clamp(0.8rem, 3vw, 2rem);
+    }
+}
+.page h1,
+.page h2,
+.page h3,
+.page h4
+{
+    margin-top: clamp(2rem, 5vw, 3rem);
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    line-height: 1.2;
+}
+
+.page h1{
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    padding-bottom: clamp(0.5rem, 1.5vw, 1rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+.page h2{
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    border-bottom: 1px dashed var(--color-section-secondary);
+    padding-bottom: 0.5rem;
+}
+
+.page h3 {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+}
+
+.page h4 {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+}
+
+.page p, 
+.page ul, 
+.page ol
+{
+    font-size: clamp(1rem, 1.8vw, 1.15rem); 
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    max-width: 75ch;
+}
+
+.page ul, 
+.page ol
+{
+    padding-left: clamp(1.5rem, 5vw, 3rem);
+}
+
+.page li {
+    margin-bottom: 0.5em; 
+}
+
+.page hr {
+    border: none;
+    border-top: 1px dashed var(--color-section-secondary);
+    margin: clamp(2rem, 5vw, 3rem) 0;
+}
+
+.unstyles {
+    list-style: none;
+}
+.page pre {
+    background-color: var(--color-primary-dark); /* Fondo oscuro para bloques de código */
+    color: var(--color-primary-light); /* Color claro para el texto del código */
+    padding: clamp(1rem, 3vw, 1.5rem);
+    border-radius: 8px;
+    overflow-x: auto; /* Para que el código se desplace horizontalmente si es muy largo */
+    margin-bottom: 1.5em;
+    font-family: 'Inconsolata', monospace; /* Tu fuente monoespaciada */
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    line-height: 1.5;
+}
+
+.page code {
+    font-family: 'Inconsolata', monospace; /* Tu fuente de código */
+}
+
+.page .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* Espacio entre icono y texto, usa rem */
+    padding: 0.8rem 1.5rem; /* Padding en rem */
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-rep-green);
+    color: var(--color-primary-light);
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.page .btn:hover {
+    background-color: #2c6d2f;
+    box-shadow: 
+        0 0 10px var(--color-rep-blue-transparent), 
+        0 0 20px var(--color-rep-yellow-transparent);
+}
+.page a {
+    color: #EF6C00; /* Color para enlaces, un contraste */
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.page a:visited{
+    color: #EF6C00;
+}
+
+.page a:hover {
+    color: #BF360C; /* Un tono más oscuro al pasar el mouse */
+}
+footer {
+    width: 100%;
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem); /* Tamaño de fuente adaptable */
+    text-align: center;
+    background-color: var(--color-primary-dark); /* Fondo oscuro consistente */
+    color: var(--color-section-secondary); /* Texto gris para la información legal */
+    padding: clamp(1rem, 3vw, 2rem) 0; /* Padding adaptable superior/inferior */
+    border-top: 1px solid var(--color-section-secondary); /* Borde superior sutil */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4); /* Sombra superior para levantarlo */
+}
+
+footer .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; /* Centra el contenido del footer */
+    padding: 0 1rem; /* Padding horizontal */
+}
+
+footer .container p {
+    margin: 0.5em 0; /* Espacio entre párrafos */
+    line-height: 1.5;
+}
+
+/* Estilos para los enlaces de redes sociales */
+footer .social-links {
+    margin-top: 1rem; /* Espacio superior para separar del texto */
+    display: flex;
+    justify-content: center; /* Centra los iconos */
+    gap: 1.2rem; /* Espacio entre los iconos */
+}
+
+footer .social-links a {
+    color: var(--color-section-secondary); /* Color base de los iconos */
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex; /* Asegura que el SVG se centre */
+    align-items: center;
+    justify-content: center;
+}
+
+footer .social-links a:hover {
+    color: var(--color-rep-yellow); /* Color al pasar el mouse */
+    transform: scale(1.1); /* Ligeramente más grande al pasar el mouse */
+}
+
+footer .social-links svg {
+    width: 1.5rem; /* Tamaño de los iconos SVG */
+    height: 1.5rem;
+    fill: currentColor; /* Usa el color del 'a' padre */
+}

@@ -23,7 +23,6 @@
     --terminal-shadow-color: rgba(67, 160, 71, 0.7); /* Sombra de resplandor verde */
     --terminal-header-bg: #2b2b2b; /* Un gris oscuro para la barra del terminal */
     --terminal-header-border: #444444; /* Un gris un poco más claro para el borde de la barra del terminal */
-
 }
 /* Normalize.css */
 
@@ -170,9 +169,9 @@ body {
     color: var(--color-primary-dark);
     font-family: 'Montserrat', sans-serif; /* Fuente por defecto para el cuerpo */
     margin: 0;
-    overflow: hidden; /* Ocultar scroll por defecto para el efecto del diagrama */
-    height: 100dvh;
     width: 100dvw;
+    overflow: hidden;
+    height: 100dvh;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -191,7 +190,8 @@ h1, h2, h3, h4, h5, h6, .raleway-header {
     line-height: 1.2;
 }
 
-h1 {
+
+.main-header h1 {
     z-index: 3090;
     color: var(--color-primary-light);
     position: fixed;
@@ -261,8 +261,6 @@ svg.bi {
     font-size: calc(1.625rem + 4.5vw);
     font-family: 'Raleway', sans-serif;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 .custom-loader-parent svg {
 	font-family: "Raleway", sans-serif;
