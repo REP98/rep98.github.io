@@ -1,5 +1,5 @@
 function showDialog(dialogId) {
-	const dialog = document.getElementById(dialogId);
+	const dialog = document.querySelector(dialogId);
 	if (dialog) {
 		dialog.showModal(); // Muestra el diálogo como modal
 		document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
@@ -59,52 +59,62 @@ function init() {
 		const nodeText = v.querySelector('.nodeLabel').innerText.trim();
 		const dialogId = getNodeDialogId(nodeText);
 		if (dialogId) {
-			v.addEventListener('click', () => showDialog(dialogId))
+			v.addEventListener('click', () => showDialog(`#${dialogId}`))
 		} else {
 			const dataID = v.getAttribute('data-id')
 			if(dataID == "A") {
 				v.addEventListener('click', () => location.reload())
 			} else if(dataID.indexOf("H") > -1 && dataID.length > 1) {
 				let page = dataID == "H1" ? "/manifest.html" : 
-						dataID == "H2" ? "/PrivacyPolicies.html" 
-						: "/Terms"
+						dataID == "H2" ? "/privacy-policy.html" 
+						: "/terms"
 				
 				v.addEventListener('click', () => location.assign(page))
 			}
 		}
 	})
-	document.querySelectorAll('#legal-bases-dialog .open-sub-dialog').forEach(button => {
-		button.addEventListener('click', (e) => {
-			const targetDialogId = e.target.dataset.dialogTarget;
-			if (targetDialogId) {
-				showDialog(targetDialogId);
-			}
-		});
-	});
-
-        // Event listeners para los botones del footer
-	document.querySelectorAll('.open-dialog-footer-btn').forEach(button => {
-		button.addEventListener('click', (e) => {
-			const targetDialogId = e.target.dataset.dialogTarget;
-			if (targetDialogId) {
-				showDialog(targetDialogId);
-			}
-		});
-	});
 
 	panzoom(MermaidSvg, {
 		autocenter: true,
 		bounds: true,
 		initialX: 100,
-		initialY: 120,
+		initialY: 100,
 		initialZoom: 0.5
 	});
-
+	document.querySelectorAll("#menu a").forEach(A => {
+		A.addEventListener("click", (e) => {
+			e.preventDefault()
+			e.stopPropagation()
+			const href = A.href
+			to_href(href)
+		})
+	})
+	const GlobalHREF = location.href
+	if (GlobalHREF.indexOf("#") > -1) {
+		to_href(GlobalHREF)
+	}
 	setTimeout(() => document.querySelector("#custom-loader").classList.remove("show"), 500)
 }
 
+function to_href(href) {
+	if (href.indexOf('#') > -1) {
+		const href2 = href.split("#")
+		const dialogID = `#${href2[1]}`;
+		showDialog(dialogID)
+	} else {
+		const URL_DEV = "https://rep98.server.test"
+		const URL_PROP = "https://rep98.github.io"
+		const hurl = new URL(href)
+		if (hurl.origin === URL_PROP) {
+			location.assign(href)
+		} else if(hurl.origin == URL_DEV){
+			hurl.pathname = `/rep98.github.io${hurl.pathname}`
+			location.assign(hurl.href)
+		}
+	}
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-	console.log("INICIADO")
 	mermaid.initialize({ 
 		startOnLoad: false, 
 		theme: 'dark',
@@ -120,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	mermaid.run({
 		querySelector: '.mermaid',
 		postRenderCallback: function() {
-			console.log('Diagrama renderizado!');
 			init()
 		}
 	});
