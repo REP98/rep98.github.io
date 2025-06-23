@@ -80,7 +80,11 @@ class Repos {
     constructor() {
         this._get_repos()
     }
-
+    static async start() {
+        const instancia = new Repos();
+        await instancia._get_repos();
+        return instancia;
+    }
     async _get_repos() {
         const cacheKey = 'filtered_repos_cache';
         const cacheKeyNatural = 'natural_repos_cache';
@@ -471,8 +475,8 @@ const Projects = {
     }
 }
 
-function applyFiltersAndSort() {
-    const repo = new Repos()
+async function applyFiltersAndSort() {
+    const repo = await Repos.start()
     const searchInput = document.getElementById('searchInput');
     const languageFilter = document.getElementById('languageFilter');
     const tagFilter = document.getElementById('tagFilter');
@@ -532,7 +536,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const typeOrder = document.querySelector("#typeOrder");
     const resetFiltersBtn = document.getElementById('resetFilters');
     // Carga inicial del los repositorios
-    const repos = new Repos()
+    const repos = await Repos.start()
     const currentRepo = repos.leaked_repositories.length > 0 ? [...repos.leaked_repositories] : [...repos.repositories]
     AllRepositoriesShow.Active = currentRepo.filter(r => !r.archived)
     AllRepositoriesShow.Legacy = currentRepo.filter(r => r.archived)
@@ -548,10 +552,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         add_option(tagFilter, repos.tags)
     }
     // Activación de eventos
-    searchInput.addEventListener("keydown", (e) => {
+    searchInput.addEventListener("keydown", async (e) => {
         if (e.key === "Enter") {
             e.preventDefault()
-            applyFiltersAndSort()
+            await applyFiltersAndSort()
         }
     })
 
