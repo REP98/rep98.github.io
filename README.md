@@ -97,17 +97,17 @@ Quiere conocer o usar nuestros últimos trabajos revise nuestro [Portafolio](htt
 
 ### Manifiesto
 
-Por medio de este repositorio de muestra públicamente el Manifiesto que declara que soy el creador y propietario del nombre, seudónimo y marca personal conocida como **REP98**, la cual utilizo desde el año 2017 de forma continua, pública y notoria en diversos contextos tecnológicos, de desarrollo web y creación de software libre.
+Por medio de este repositorio de muestra públicamente el **Manifiesto de Uso Previo de la Marca REP98** que declara que soy el creador y propietario del nombre, seudónimo y marca personal conocida como **REP98**, la cual utilizo desde el año 2017 de forma continua, pública y notoria en diversos contextos tecnológicos, de desarrollo web y creación de software libre.
 
-Si desea ver, descargar o verificar el manifiesto puede ir a [Nuestro Sitio Web](https://rep98.github.io/manifest.html)
+Si desea ver, descargar o verificar el **Manifiesto de Uso Previo de la Marca REP98** puede ir a [Nuestro Sitio Web](https://rep98.github.io/manifest.html)
 
 ### Otras Áreas legales
 
-- [Politicas de Privacidad](https://rep98.github.io/privacy-policy.html)
-- [Terminos y Condiciones](https://rep98.github.io/terms.html)
+- [Políticas de Privacidad](https://rep98.github.io/privacy-policy.html)
+- [Términos y Condiciones](https://rep98.github.io/terms.html)
 - [Licencia](/LICENSE)
 
----------
+----
 
 ## Información sobre el Author y Propietario de la Marca REP98
 
@@ -126,7 +126,7 @@ Si desea ver, descargar o verificar el manifiesto puede ir a [Nuestro Sitio Web]
 - Sitio Web Oficial: https://rep98.vzlaweb.com
 - Sitio Web Secundario: https://rep98.github.io
 
-#### REDES SOCIALES
+#### Redes Sociales
 
 - *GitHub*: https://github.com/REP98
 - *Instagram*: https://www.instagram.com/repvzla98
@@ -140,5 +140,9 @@ Si desea ver, descargar o verificar el manifiesto puede ir a [Nuestro Sitio Web]
 - *Google Developers*: https://developers.google.com/profile/u/rep98
 - *Packagist*: https://packagist.org/users/REP98
 - *NPM*: https://www.npmjs.com/~rep985
+
+#### Mensajeria
+
 - *Telegram*: https://t.me/REP987
 - *Whatsapp*: https://wa.link/7kjdy8
+- *Correo*: robertperez@vzlaweb.com
