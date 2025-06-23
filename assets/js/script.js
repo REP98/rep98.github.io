@@ -33,7 +33,6 @@ const getNodeDialogId = (nodeText) => {
 		case 'LOCALIZACIÓN WEB': 
 		case 'CONSULTORÍA TECNOLÓGICA': 
 			return 'services-dialog';
-		case 'PORTAFOLIOS': return 'portfolio-dialog';
 		case 'CONTACTOS': 
 		case 'FORMULARIO DE CONTACTO': 
 		case 'ENLACES DE REDES SOCIALES': 
@@ -70,6 +69,8 @@ function init() {
 						: "/terms"
 				
 				v.addEventListener('click', () => location.assign(page))
+			} else if (dataID.indexOf("E") > -1){
+				v.addEventListener('click', () => location.assign('/portfolio.html'))
 			}
 		}
 	})
