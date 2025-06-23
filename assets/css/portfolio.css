@@ -10,7 +10,9 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
 :root {
+    /* Tus variables de color globales, copiadas para referencia */
     --color-primary-dark: #1a1a1a;   /* Negro de fondo en Light Mode, texto en Dark Mode */
     --color-primary-light: #FAFAFA;  /* Blanco de fondo en Dark Mode, texto en Light Mode */
 
@@ -20,24 +22,1160 @@
     --color-rep-red: #e53935;      /* Rojo (98) - Portafolio */
 
     --color-section-secondary: #9E9E9E; /* Gris azulado para nodos secundarios */
-    --color-text-light: #F5F5F5;
+    --color-text-light: #F5F5F5; /* Esto parece ser para texto claro sobre fondo oscuro */
+    --color-text-dark: #333; /* Usaremos un color oscuro para texto sobre fondos claros */
+
+    /* Espaciado */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
+
+    /* Bordes y sombras */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --shadow-dark: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra más oscura */
+
+    /* Transiciones */
+    --transition-speed: 0.3s;
 }
+
+html[data-mode="dark"] {
+    background-color: var(--color-primary-dark);
+    color: var(--color-primary-light);
+}
+
+html[data-mode="dark"] .project-card {
+    background-color: var(--color-primary-dark); /* Fondo de tarjeta más oscuro */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-dark);
+}
+
+html[data-mode="dark"] .project-title {
+    color: var(--color-rep-blue); /* Color del título en modo oscuro */
+}
+
+html[data-mode="dark"] .project-meta,
+html[data-mode="dark"] .project-description {
+    color: var(--color-section-secondary); /* Texto grisáceo en modo oscuro */
+}
+
+html[data-mode="dark"] .project-tag {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-primary-light);
+}
+
+html[data-mode="dark"] .btn-github {
+    background-color: #555;
+    color: var(--color-primary-light);
+}
+
+html[data-mode="dark"] .btn-github:hover {
+    background-color: #777;
+}
+
+html[data-mode="dark"] .legacy-grid .project-card {
+    background-color: var(--color-primary-dark); /* Fondo más oscuro para legado en dark mode */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    opacity: 0.7;
+}
+
+html[data-mode="dark"] .portfolio-controls {
+    background-color: var(--color-primary-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+html[data-mode="dark"] .search-input,
+html[data-mode="dark"] .filter-select {
+    background-color: var(--color-primary-dark);
+    color: var(--color-primary-light);
+    border-color: var(--color-section-secondary);
+}
+
+html[data-mode="dark"] .filter-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='white' d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+}
+
 body {
-    background-color: #f5f5f5;
+    background-color: #e7e7e7;
     color: var(--color-primary-dark);
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     margin: 0;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 1rem;
     font-weight: 700;
     line-height: 1.2;
+    font-family: 'Raleway', sans-serif; 
 }
 p{
     margin: 0;
     margin-bottom: 1rem;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    font-family: 'Raleway', sans-serif; 
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-primary-dark);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid var(--color-section-secondary);
+    border-radius: 0.375rem;
+    background-color: var(--color-section-secondary);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+button, select {
+    text-transform: none;
+}
+button:not(:disabled), 
+[type="button"]:not(:disabled), 
+[type="reset"]:not(:disabled), 
+[type="submit"]:not(:disabled) {
+    cursor: pointer;
+}
+
+.btn-circle {
+    aspect-ratio: 1;
+    border-radius: 100%;
+    max-width: max-content;
+    padding: 0.5rem;
+}
+
+.btn svg {
+    width: 100%;
+    height: 100%;
+}
+.btn:focus {
+    outline: none;
+}
+.btn:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.custom-loader-parent {
+    background-color: var(--color-primary-dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    overflow: hidden;
+    transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+    z-index: 0;
+    flex-direction: column;
+}
+
+.custom-loader {
+    width:120px;
+    height:120px;
+    margin: auto;
+    margin-bottom: 4rem;
+    color: #3949AB;
+    --c:linear-gradient(currentColor 0 0);
+    background:
+        var(--c) 0 76px,
+        var(--c) right 36px bottom 36px,
+        var(--c) right 36px top    36px,
+        var(--c) 36px 36px,
+        var(--c) 36px 100%,
+        var(--c) 100% 100%,
+        var(--c) 100% 0,
+        var(--c) 0 0;
+    background-repeat: no-repeat;
+}
+
+.custom-loader-parent span {
+    color: var(--color-section-contact);
+    margin: auto;
+    margin-top: 0.1rem;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: calc(1.625rem + 4.5vw);
+    font-family: 'Raleway', sans-serif;
+}
+@keyframes l8-1 {
+    0%     {background-size: 0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   }
+    6.25%  {background-size: 80px 8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   }
+    12.5%  {background-size: 80px 8px,8px 40px,0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   }
+    18.75% {background-size: 80px 8px,8px 40px,40px 8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   }
+    25%    {background-size: 80px 8px,8px 40px,40px 8px,8px 80px,0    8px,8px 0   ,0    8px,8px 0   }
+    31.25% {background-size: 80px 8px,8px 40px,40px 8px,8px 80px,80px 8px,8px 0   ,0    8px,8px 0   }
+    37.5%  {background-size: 80px 8px,8px 40px,40px 8px,8px 80px,80px 8px,8px 100%,0    8px,8px 0   }
+    43.75% {background-size: 80px 8px,8px 40px,40px 8px,8px 80px,80px 8px,8px 100%,100% 8px,8px 0   }
+    48%,
+    52%    {background-size: 80px 8px,8px 40px,40px 8px,8px 80px,80px 8px,8px 100%,100% 8px,8px 80px}
+    56.25% {background-size: 0    8px,8px 40px,40px 8px,8px 80px,80px 8px,8px 100%,100% 8px,8px 80px}
+    62.5%  {background-size: 0    8px,8px 0   ,40px 8px,8px 80px,80px 8px,8px 100%,100% 8px,8px 80px}
+    68.75% {background-size: 0    8px,8px 0   ,0    8px,8px 80px,80px 8px,8px 100%,100% 8px,8px 80px}
+    75%    {background-size: 0    8px,8px 0   ,0    8px,8px 0   ,80px 8px,8px 100%,100% 8px,8px 80px}
+    81.25% {background-size: 0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 100%,100% 8px,8px 80px}
+    87.5%  {background-size: 0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   ,100% 8px,8px 80px}
+    93.75% {background-size: 0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 80px}
+    100%   {background-size: 0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   ,0    8px,8px 0   }
+}
+
+@keyframes l8-2 {
+    0%,49.9% {background-position:0 76px, right 36px bottom 36px, right 36px top 36px,36px 36px,36px 100%,100% 100%,100% 0,0 0}
+    50%,100% {background-position:right 36px bottom 36px, right 36px top 36px, 36px 36px,36px 100%,100% 100%,100% 0,0 0,bottom 36px left 0}
+}
+#custom-loader.show{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 3000;
+}
+#custom-loader.show .custom-loader {
+    animation: 
+        l8-1 4s infinite,
+        l8-2 4s infinite;
+}
+
+header#navbar {
+    width: 100%;
+    height: 4rem; /* Un poco más alto para mayor presencia */
+    padding: 0.5rem clamp(1rem, 4vw, 3rem); /* Padding horizontal adaptable, vertical fijo */
+    position: sticky; /* Sticky para que se quede arriba al hacer scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    /* bottom: auto; ya no es necesario si es sticky */
+    
+    /* Nueva apariencia para el fondo */
+    background-color: var(--color-primary-dark); /* Un fondo oscuro y sólido */
+    /* background: rgba(0, 0, 0, 0.9); /* Opción con transparencia sutil y opaca */
+    
+    /* Borde o Sombra más definidos */
+    border-bottom: 1px solid var(--color-section-secondary); /* Borde sutil inferior */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra más definida */
+    /* backdrop-filter: blur(5px); /* Efecto de desenfoque si usas background-color con transparencia */
+    
+    z-index: 1090;
+    display: flex; /* Asegura que el contenedor interno se alinee bien */
+    align-items: center;
+    justify-content: center; /* Centra el container internamente */
+}
+
+header#navbar .container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+header#navbar .logo img {
+    height: 2rem; /* Tamaño del logo un poco más grande */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+header#navbar .logo:hover img {
+    transform: scale(1.1); /* Pequeño efecto al pasar el mouse */
+}
+header#navbar  svg {
+	font-family: "Raleway", sans-serif;
+	width: 100%; 
+    height: 100%;
+}
+header#navbar svg text {
+	animation: stroke 6s infinite alternate;
+	stroke-width: 2;
+	stroke: #E53935;
+	font-size: 60px;
+}
+
+@keyframes stroke {
+	0%   {
+		fill: rgba(255,193,7,0); stroke: rgba(229,57,53,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(255,193,7,0); stroke: rgba(229,57,53,1); }
+	80%  {fill: rgba(255,193,7,0); stroke: rgba(229,57,53,1); stroke-width: 3; }
+	100% {
+		fill: rgba(255,193,7,1); stroke: rgba(229,57,53,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+header#navbar .wrapper-animate {
+    margin: auto;
+    height: 64px;
+}
+
+header#navbar #menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #444;
+    background-color: rgba(0,0,0,.85);
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s;
+}
+
+header#navbar #menu a{
+    color: #fff;
+    padding: 25px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+}
+
+header#navbar #menu a:hover {
+    background: rgba(255,255,255,.1);
+    color: var(--color-rep-yellow);
+}
+header#navbar #menu a.copy{
+    margin-top: auto;
+    font-size: 65%;
+}
+header#navbar #menu.open {
+    max-height: 100vh;
+    overflow: visible;
+}
+
+.btn-menu {
+    border: 0;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 39px;
+}
+.btn-menu span, 
+.btn-menu span:before, 
+.btn-menu span:after {
+    width: 28px;
+    height: 3px;
+    background-color: var(--color-primary-light);
+    display: block;
+    transition: .3s;
+}
+.btn-menu span:before {
+    content: '';
+    transform: translateY(-9px);
+}
+.btn-menu span:after {
+    content: '';
+    transform: translateY(6px);
+}
+.btn-menu.toggler-open span {
+    background-color: transparent;
+}
+.btn-menu.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+}
+.btn-menu.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+}
+
+@media (max-width: 480px) {
+    header#navbar {
+        height: 3.5rem; /* Un poco más compacto en móviles */
+        padding: 0.35rem clamp(0.5rem, 2vw, 1rem);
+    }
+    header#navbar .logo img {
+        height: 1.8rem;
+    }
+}
+
+footer {
+    width: 100%;
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem); /* Tamaño de fuente adaptable */
+    text-align: center;
+    background-color: var(--color-primary-dark); /* Fondo oscuro consistente */
+    color: var(--color-section-secondary); /* Texto gris para la información legal */
+    padding: clamp(1rem, 3vw, 2rem) 0; /* Padding adaptable superior/inferior */
+    border-top: 1px solid var(--color-section-secondary); /* Borde superior sutil */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4); /* Sombra superior para levantarlo */
+}
+
+footer .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; /* Centra el contenido del footer */
+    padding: 0 1rem; /* Padding horizontal */
+}
+
+footer .container p {
+    margin: 0.5em 0; /* Espacio entre párrafos */
+    line-height: 1.5;
+}
+
+/* Estilos para los enlaces de redes sociales */
+footer .social-links {
+    margin-top: 1rem; /* Espacio superior para separar del texto */
+    display: flex;
+    justify-content: center; /* Centra los iconos */
+    gap: 1.2rem; 
+    flex-wrap: wrap;
+}
+
+footer .social-links a {
+    color: var(--color-section-secondary); /* Color base de los iconos */
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex; /* Asegura que el SVG se centre */
+    align-items: center;
+    justify-content: center;
+}
+
+footer .social-links a:hover {
+    color: var(--color-rep-yellow); /* Color al pasar el mouse */
+    transform: scale(1.1); /* Ligeramente más grande al pasar el mouse */
+}
+
+footer .social-links svg {
+    width: 1.5rem; /* Tamaño de los iconos SVG */
+    height: 1.5rem;
+    fill: currentColor; /* Usa el color del 'a' padre */
+}
+
+.footer-nav a {
+    color: var(--color-primary-light);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+
+.portfolio-page {
+    /* Flex grow para que ocupe el espacio entre header y footer */
+    flex: 1; 
+    width: 90%;
+    max-width: 1200px;
+    margin: var(--spacing-xxl) auto; /* Margen superior/inferior consistente */
+    padding: 0 var(--spacing-md);
+}
+
+.content-section {
+    padding: var(--spacing-xl) 0; /* Espaciado interno de la sección */
+}
+
+h1, .legacy-title {
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-rep-blue); /* Títulos en azul principal */
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    font-size: clamp(2rem, 4vw, 2.8rem); /* Tamaño adaptable */
+}
+
+.section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-xxl) auto; /* Margen inferior para separar */
+    color: var(--color-text-dark); /* Color de texto estándar */
+    font-size: clamp(1rem, 1.5vw, 1.15rem); /* Tamaño adaptable */
+}
+
+/* --- Controles de Portafolio (Filtros y Búsqueda) --- */
+.filters {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    box-shadow: var(--shadow-light);
+    border: 1px solid #eee;
+    background-color: var(--color-primary-light);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-xxl);
+}
+
+.filters-headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    padding: 0.375rem 0.85rem;
+}
+
+.filters-headers h2{
+    margin: 0;
+    width: 100%;
+    z-index: 2;
+}
+.portfolio-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);    
+    align-items: center;
+    justify-content: center;
+    transition: max-height 0.4s ease, padding 0.3s ease-in;    
+}
+
+.search-container {
+    width: clamp(300px, 10vw, 100%);
+    border: 1px solid var(--color-section-secondary);
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: border-color var(--transition-speed) ease;
+}
+.search-input {
+    flex-grow: 1;
+    min-width: 250px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 0;
+    font-size: 1rem;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    border-radius: var(--border-radius-sm);
+}
+
+.search-input::placeholder {
+    color: var(--color-section-secondary);
+    opacity: 0.7;
+}
+
+.search-container:focus-within {
+    outline: none;
+    border-color: var(--color-rep-blue);
+    box-shadow: 0 0 0 2px rgba(57, 73, 171, 0.3);
+}
+.search-icon:focus,
+.search-input:focus{
+    outline: none;
+}
+.search-icon {
+    border: 0;
+    background: transparent;
+    height: 100%;
+    display: inline-block;
+    min-height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: 0.2s background ease-in-out, 0.15s color ease-in;
+}
+.search-icon svg.bi {
+    width: 100%;
+    height: 100%;
+}
+.search-container:focus-within,
+.search-icon:hover {
+    background-color: var(--color-rep-green);
+    color: var(--color-primary-light);
+}
+
+/* From Uiverse.io by Nawsome */ 
+/* From Uiverse.io by Gautammsharma */ 
+.material-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: var(--color-primary-dark);
+    cursor: pointer;
+    user-select: none;
+}
+
+.material-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkmark {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    border: 2px solid var(--color-primary-dark);
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.material-checkbox input[type="checkbox"]:checked ~ .checkmark {
+    background-color: #1e38db;
+    border-color: var(--color-rep-blue);
+}
+
+.material-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 4px;
+    height: 10px;
+    border: solid var(--color-primary-light);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.material-checkbox input[type="checkbox"]:focus ~ .checkmark {
+    box-shadow: 0 0 0 2px var(--color-rep-blue);
+}
+
+.material-checkbox:hover input[type="checkbox"] ~ .checkmark {
+    border-color: var(--color-rep-blue);
+}
+
+.material-checkbox input[type="checkbox"]:disabled ~ .checkmark {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.material-checkbox input[type="checkbox"]:disabled ~ .checkmark:hover {
+    border-color: #ccc;
+}
+
+.filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    align-items: center;
+}
+.select-wrapper{
+    position: relative;
+    display: inline-block;
+    width: max-content;
+    padding-right: 1.5rem;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.filter-select{
+    padding: 0.65rem 2.2rem 0.65rem 0.8rem;
+    background: var(--color-primary-light);
+    color: var(--color-primary-dark); 
+    font-size: 0.95rem;
+    cursor: pointer;
+    appearance: none;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+.select-wrapper::after{
+    content: "\25BD";
+    position: absolute;
+    right: 0.8em;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    color: var(--color-primary-dark);
+    transition: transform 0.3s, color 0.3s;
+    pointer-events: none;
+}
+
+.select-wrapper:focus-within{
+    border-color: var(--color-rep-blue);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.select-wrapper:focus-within::after{
+    transform: translateY(-50%) rotate(180deg);
+    color: var(--color-rep-blue);
+}
+.select-wrapper:hover,
+.btn-reset-filters:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: var(--color-rep-blue);
+}
+.btn-reset-filters{
+    background: transparent;
+    color: var(--color-primary-dark);
+    width: 32px;
+    height: 32px;
+    padding: 0.35rem;
+}
+.btn-reset-filters:hover{
+    background-color: var(--color-rep-red);
+    border-color: var(--color-rep-red);
+    color: var(--color-primary-light);
+}
+select:open {
+    background-color: #fff;
+    border-color: var(--color-rep-blue);
+}
+.filter-select option {
+    padding: 0.65rem;
+}
+.filter-select option:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#hasPageFilter:focus,
+.filter-select:focus,
+.btn-reset-filters:focus {
+    outline: none;
+}
+/* From Uiverse.io by Bodyhc */ 
+.checkbox-wrapper-35 .switch {
+    display: none;
+}
+
+.checkbox-wrapper-35 .switch + label {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #78768d;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 12px;
+    line-height: 15px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox-wrapper-35 .switch + label::before,
+.checkbox-wrapper-35 .switch + label::after {
+    content: '';
+    display: block;
+}
+
+.checkbox-wrapper-35 .switch + label::before {
+    background-color: var(--color-rep-blue);
+    border-radius: 500px;
+    height: 15px;
+    margin-right: 8px;
+    -webkit-transition: background-color 0.125s ease-out;
+    transition: background-color 0.125s ease-out;
+    width: 25px;
+}
+
+.checkbox-wrapper-35 .switch + label::after {
+    background-color: var(--color-primary-light);
+    border-radius: 13px;
+    box-shadow: 0 3px 1px 0 rgba(37, 34, 71, 0.05), 0 2px 2px 0 rgba(37, 34, 71, 0.1), 0 3px 3px 0 rgba(37, 34, 71, 0.05);
+    height: 13px;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    -webkit-transition: -webkit-transform 0.125s ease-out;
+    transition: -webkit-transform 0.125s ease-out;
+    transition: transform 0.125s ease-out;
+    transition: transform 0.125s ease-out, -webkit-transform 0.125s ease-out;
+    width: 13px;
+}
+
+.checkbox-wrapper-35 .switch + label .switch-x-text {
+    display: block;
+    margin-right: .3em;
+}
+
+.checkbox-wrapper-35 .switch + label .switch-x-toggletext {
+    display: block;
+    font-weight: bold;
+    height: 15px;
+    overflow: hidden;
+    position: relative;
+    width: 30px;
+}
+
+.checkbox-wrapper-35 .switch + label .switch-x-unchecked,
+.checkbox-wrapper-35 .switch + label .switch-x-checked {
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transition: opacity 0.125s ease-out, -webkit-transform 0.125s ease-out;
+    transition: opacity 0.125s ease-out, -webkit-transform 0.125s ease-out;
+    transition: transform 0.125s ease-out, opacity 0.125s ease-out;
+    transition: transform 0.125s ease-out, opacity 0.125s ease-out, -webkit-transform 0.125s ease-out;
+}
+
+.checkbox-wrapper-35 .switch + label .switch-x-unchecked {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}
+
+.checkbox-wrapper-35 .switch + label .switch-x-checked {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+
+.checkbox-wrapper-35 .switch + label .switch-x-hiddenlabel {
+    position: absolute;
+    visibility: hidden;
+}
+
+.checkbox-wrapper-35 .switch:checked + label::before {
+    background-color: var(--color-rep-green);
+}
+
+.checkbox-wrapper-35 .switch:checked + label::after {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+}
+
+.checkbox-wrapper-35 .switch:checked + label .switch-x-unchecked {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+}
+
+.checkbox-wrapper-35 .switch:checked + label .switch-x-checked {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}
+
+/* --- Grid de Proyectos --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 3 columnas aprox */
+    gap: var(--spacing-xl); /* Mayor espacio entre tarjetas */
+    margin-top: var(--spacing-xl);
+}
+
+/* --- Tarjetas de Proyecto --- */
+.project-card {
+    background-color: var(--color-primary-light);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-light);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    height: 100%;
+    border: 1px solid #f0f0f0; /* Borde muy sutil para definición */
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.project-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+    color: var(--color-rep-blue);
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+.project-meta {
+    font-size: 0.7rem;
+    color: var(--color-section-secondary);
+    margin-bottom: 0.5rem;
+    display: flex; /* Usar flex para los meta tags */
+    flex-wrap: wrap; /* Permitir que se envuelvan */
+    gap: 0.15rem; /* Espacio entre los spans */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: var(--color-primary-dark);
+    flex-grow: 1;
+    margin-bottom: var(--spacing-lg);
+    overflow: hidden; /* Oculta cualquier texto que se desborde */
+    text-overflow: ellipsis; /* Añade puntos suspensivos */
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limita a 4 líneas, ajusta si es necesario */
+    -webkit-box-orient: vertical;
+}
+
+.project-tags {
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.project-tag {
+    display: inline-block;
+    background-color: var(--color-rep-red); /* Etiquetas en verde */
+    color: var(--color-primary-light);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--border-radius-sm);
+}
+
+.project-actions {
+    margin-top: auto;
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap; /* Para que los botones se envuelvan si hay poco espacio */
+}
+
+.project-archive {
+    position: absolute;
+    top: 0.2rem;
+    left: auto;
+    right: 0.5rem;
+    color: var(--color-rep-red);
+}
+
+.btn-github,
+.btn-page {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    text-align: center; /* Centrar el texto en botones */
+    flex: 1; /* Para que los botones ocupen espacio equitativamente */
+    min-width: 120px; /* Ancho mínimo para los botones */
+}
+
+.btn-github {
+    background-color: var(--color-primary-dark);
+    color: var(--color-primary-light);
+    border: 1px solid var(--color-primary-dark);
+}
+
+.btn-github:hover {
+    background-color: #333;
+    border-color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-page {
+    background-color: var(--color-rep-yellow);
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-rep-yellow);
+}
+
+.btn-page:hover {
+    background-color: #ffa000;
+    border-color: #ffa000;
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
+}
+
+/* --- Estilos para "El Legado" (Repositorios Archivados) --- */
+.legacy-title {
+    margin-top: var(--spacing-xxl);
+    color: var(--color-rep-red); /* Título del legado en rojo */
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+}
+
+.legacy-grid .project-card {
+    background-color: #fcfcfc; /* Fondo casi blanco para legado en light mode */
+    border: 1px solid #ddd;
+    opacity: 0.85; /* Ligeramente opaco */
+    box-shadow: var(--shadow-light);
+}
+
+.legacy-grid .project-card:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.legacy-card .project-status {
+    background-color: var(--color-rep-red);
+    color: var(--color-primary-light);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-right: var(--spacing-sm);
+    vertical-align: middle;
+}
+
+/* --- Indicador de Carga (el "no-botón" para el scroll infinito) --- */
+.btn-more-load-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 1.35rem 0.75rem;
+}
+.btn-more-load {
+    background-color: var(--color-rep-green);
+    display: none;
+    font-weight: 900;
+    color: var(--color-primary-light);
+    border-color: #1e5b21;
+}
+.btn-more-load:hover{
+    background-color: #1e5b21;
+}
+.btn-more-load.show{
+    display: inline-block;
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: var(--spacing-xxl) 0; /* Espaciado generoso */
+    display: none; /* Por defecto oculto */
+    font-size: 1.1rem;
+    color: var(--color-rep-blue); /* Color del texto del indicador */
+    font-family: 'Inconsolata', monospace; /* Tipo de letra de consola */
+}
+
+.loading-indicator.show {
+    display: flex; /* Usa flexbox para centrar el spinner y texto */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--color-rep-blue); /* Spinner con color principal */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto var(--spacing-sm) auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Media Queries para Responsividad --- */
+@media (max-width: 992px) { /* Para pantallas más pequeñas que un desktop grande */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 2-3 columnas */
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-page {
+        width: 95%;
+        padding: 0 var(--spacing-sm);
+    }
+
+    h1, .legacy-title {
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
+    }
+
+    .section-description {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    .portfolio-controls {
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+        gap: var(--spacing-sm);
+        will-change: max-height;
+    }
+
+    .portfolio-controls.open {
+        padding: var(--spacing-md);
+        max-height: max-content;
+    }
+    .filters-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--spacing-sm);
+    }
+    .select-wrapper,
+    .filter-select,
+    .search-container {
+        width: 100%;
+    }
+    .material-checkbox{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Podría ser 1 o 2 columnas dependiendo del minmax */
+        gap: var(--spacing-md);
+    }
+    .project-actions a{
+        width: 100%;
+        flex: 1 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-page {
+        padding: 0 var(--spacing-xs);
+    }
+
+    h1, .legacy-title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+    
+    .section-description {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+    }
+
+    .project-card {
+        padding: var(--spacing-md);
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+    }
+
+    .project-meta {
+        flex-direction: column; /* Meta items en columna en móviles */
+        gap: 0;
+    }
+    .project-meta span {
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .project-actions {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+
+    .btn-github,
+    .btn-page {
+        width: 100%;
+    }
 }

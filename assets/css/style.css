@@ -966,7 +966,7 @@ dialog details[open] {
 }
 #menu a {
 	display: block;
-	line-height: 45px;
+	line-height: clamp(20px, 4vw, 45px);
 	padding: 0 14px;
 	text-decoration: none;
 	color: #FAFAFA;
